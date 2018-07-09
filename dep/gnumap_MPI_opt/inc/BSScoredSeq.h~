@@ -1,0 +1,45 @@
+#ifndef BS_SCORED_SEQ_H
+#define BS_SCORED_SEQ_H
+
+#include "ScoredSeq.h"
+
+class BSScoredSeq : public ScoredSeq {
+
+	public:
+		BSScoredSeq() :ScoredSeq() {}
+	
+		BSScoredSeq(string seq, double as, unsigned long pos, bool us, int am) 
+			: ScoredSeq(seq,as,pos,us,am) {}
+		
+		BSScoredSeq(const BSScoredSeq &other) : ScoredSeq(other) {}
+		
+		BSScoredSeq& operator =(const BSScoredSeq &other) {
+			Init(other);
+			return *this;
+		}
+		
+		virtual ~BSScoredSeq() {}
+		
+		/*
+		 * score will add the log-odds score (adjusted by denom) to each
+		 * position on the Genome gen.  Additionally, this can be passed
+		 * a flag to specify the number of positions after the start position
+		 * to add to (for adding to different lengths of sequences).
+		 */
+		virtual void score(double, Genome &, unsigned int, Read &, map<unsigned long, unsigned int> &, double &, pthread_mutex_t&);
+			
+		
+	private:
+		inline string GetConsensus(const Read &read) const ;
+		
+		/*
+		 * Because this is used to produce the consensus sequence, we need ambiguity characters...
+		 */
+		inline char max_char(const float* chr) const;
+		
+		//inline string getStartOffGen(const Read &read, const string gen, int &gen_start_pos);
+		//float get_val(const float* a, const char b);
+};
+
+#endif
+

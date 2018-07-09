@@ -1,0 +1,6 @@
+
+Command Line Arguments:  ./bin/gnumap-stl.bkp -g /media/sleepysilver/data/genome/ce10/splice/chrI.fa -o /home/hong/projects/rnaSeq-mapping/exp/ce10/splice/m20-s0-k1/chrI_test -c 16 -m 20 -j 10 -k 1 -h 50 -a 0.95 -v 1 -s 0 --up_strand --no_gmp -A TGGAATTCTCGGGTGCCAAGG -d --illumina /media/sleepysilver/data/reads/8374R/Fastq/8374X4_110825_SN141_0377_AD06YNACXX_8_1.txt 
+	/media/sleepysilver/data/genome/ce10/splice/chrI.fa
+Hashing Genome...
+Reading: ZK39.10:chrI:11160025-11160113_11162057-11162151_11162416-11162419
+................................

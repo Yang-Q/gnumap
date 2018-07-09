@@ -1,0 +1,3 @@
+#!/bin/sh
+
+../scripts/gnumaps.pl --genome ./genomes/ref.fa --pair_1 ./reads/ref-wc-edited_1.fa --pair_2 ./reads/ref-wc-edited_2.fa --phred_offset 0 --read_type rna --per_dist 10 --nt_conv a2i --num_threads 1 --outdir ./exp/toyRNAe_fa

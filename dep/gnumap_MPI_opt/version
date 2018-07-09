@@ -1,0 +1,2 @@
+this is most updated version. I use two seq_map to speed up DP. also, to avoid mapping biased for a read containing many T to align reference containing many C, I rearrange gALIGN_SCORES.
+

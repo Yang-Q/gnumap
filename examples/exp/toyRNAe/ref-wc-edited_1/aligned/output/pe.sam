@@ -1,0 +1,49 @@
+chrT_71_85_0_1_0_0_0:0:0_0:0:0_1	99	chrT	71	208	35M	=	85	49	ATACGATACGAAAACATTATTTCCTATGTGTTTTT	?????>>>>>>>>>>=============<<<<<<<	AS:i:105	PG:Z:blat
+chrT_71_85_0_1_0_0_0:0:0_0:0:0_1	147	chrT	85	208	35M	=	71	-49	CATTATTTCCTATGTGTTTTTCTGCTGTTTCAAAC	<<<<<<<=============>>>>>>>>>>?????	AS:i:105	PG:Z:blat
+chrT_86_74_1_0_0_0_0:0:0_0:0:0_d	83	chrT	86	208	35M	=	74	-47	ATTATTTCCTATGTGTTTTTCTGCTGTTTCAAACG	<<<<<<<=============>>>>>>>>>>?????	AS:i:105	PG:Z:blat
+chrT_86_74_1_0_0_0_0:0:0_0:0:0_d	163	chrT	74	208	35M	=	86	47	CGATACGAAAACATTATTTCCTATGTGTTTTTCTG	?????>>>>>>>>>>=============<<<<<<<	AS:i:105	PG:Z:blat
+chrT_88_75_1_0_0_0_0:0:0_0:0:0_c	83	chrT	88	208	35M	=	75	-48	TATTTCCTATGTGTTTTTCTGCTGTTTCAAACGGA	<<<<<<<=============>>>>>>>>>>?????	AS:i:105	PG:Z:blat
+chrT_88_75_1_0_0_0_0:0:0_0:0:0_c	163	chrT	75	208	35M	=	88	48	GATACGAAAACATTATTTCCTATGTGTTTTTCTGC	?????>>>>>>>>>>=============<<<<<<<	AS:i:105	PG:Z:blat
+chrT_10_1_1_0_0_0_0:0:0_0:0:0_0	83	chrT	10	30	35M	=	1	-44	TTAGCTTATACTAGGCATGTTGTTACGACTAACCA	<<<<<<<=============>>>>>>>>>>?????	AS:i:101	XP:f:1.00000e+00	X0:i:1	XD:f:8.605e+10	XS:Z:ag	PG:Z:gnu
+chrT_10_1_1_0_0_0_0:0:0_0:0:0_0	163	chrT	1	30	35M	=	10	44	GTATTAGTATTAGCTTATACTAGGCATGTTGTTAC	?????>>>>>>>>>>=============<<<<<<<	AS:i:101	XP:f:1.00000e+00	X0:i:1	XD:f:8.605e+10	XS:Z:ag	PG:Z:gnu
+chrT_11_25_0_1_0_0_0:0:0_0:0:0_5	99	chrT	11	30	35M	=	25	49	TAGCTTATACCAGACATGTTGTTACGACTAACCAG	?????>>>>>>>>>>=============<<<<<<<	AS:i:100	XP:f:1.000e+00	X0:i:1	XD:f:6.702e+10	XS:Z:ag	PG:Z:gnu
+chrT_11_25_0_1_0_0_0:0:0_0:0:0_5	147	chrT	25	208	35M	=	11	-49	CATGTTGTTACGACTAACCAGGATTCTTGAAACAA	<<<<<<<=============>>>>>>>>>>?????	AS:i:105	PG:Z:blat
+chrT_13_1_1_0_0_0_0:0:0_1:0:0_b	89	chrT	13	30	35M	*	0	0	GCTTATACTAGGCATGTTGTTACGACTAACCAGGA	<<<<<<<=============>>>>>>>>>>?????	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.605e+10	XS:Z:ag	PG:Z:gnu
+chrT_17_33_0_1_0_0_0:0:0_1:0:0_7	73	chrT	17	30	35M	*	0	0	ATACTAGGCATGTTGTTACGACTAACCAGGATTCT	?????>>>>>>>>>>=============<<<<<<<	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.602e+10	XS:Z:ag	PG:Z:gnu
+chrT_21_35_0_1_0_0_0:0:0_0:0:0_f	73	chrT	21	30	35M	*	0	0	TAGGCATGTTGTTACGACTAACCAGGATTCTTGAA	?????>>>>>>>>>>=============<<<<<<<	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.599e+10	XS:Z:ag	PG:Z:gnu
+chrT_2_14_0_1_0_0_0:0:0_0:0:0_f	99	chrT	2	30	35M	=	14	47	TATTAGTATTAGCTTATACCAGACATGTTGTTACG	?????>>>>>>>>>>=============<<<<<<<	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.605e+10	XS:Z:tc	PG:Z:gnu
+chrT_2_14_0_1_0_0_0:0:0_0:0:0_f	147	chrT	14	30	35M	=	2	-47	CTTATACCAGACATGTTGTTACGACTAACCAGGAT	<<<<<<<=============>>>>>>>>>>?????	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.605e+10	XS:Z:tc	PG:Z:gnu
+chrT_22_36_0_1_0_0_0:0:0_0:0:0_b	99	chrT	22	30	35M	=	36	49	AGACATGTTGTTACGACTAACCAGGATTCTTGAAA	?????>>>>>>>>>>=============<<<<<<<	AS:i:105	XP:f:1.000e+00	X0:i:1	XD:f:2.334e+11	XS:Z:tc	PG:Z:gnu
+chrT_22_36_0_1_0_0_0:0:0_0:0:0_b	147	chrT	36	208	35M	=	22	-49	GACTAACCAGGATTCTTGAAACAACAGAAAAACAC	<<<<<<<=============>>>>>>>>>>?????	AS:i:105	PG:Z:blat
+chrT_29_42_0_1_0_0_0:0:0_0:0:0_10	99	chrT	29	208	35M	=	42	48	TTGTTACGACTAACCAGGATTCTTGAAACAACAGA	?????>>>>>>>>>>=============<<<<<<<	AS:i:105	PG:Z:blat
+chrT_29_42_0_1_0_0_0:0:0_0:0:0_10	147	chrT	42	30	35M	=	29	-48	CCAGGATTCTTGAAACAACAGAAAAACACACACGA	<<<<<<<=============>>>>>>>>>>?????	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.599e+10	XS:Z:tc	PG:Z:gnu
+chrT_31_46_0_1_0_0_0:0:0_1:0:0_11	73	chrT	31	30	35M	*	0	0	GTTACGACTAACCAGGATTCTTGAAACAACAGAAA	?????>>>>>>>>>>=============<<<<<<<	AS:i:105	XP:f:1.000e+00	X0:i:1	XD:f:2.334e+11	XS:Z:ag	PG:Z:gnu
+chrT_35_22_1_0_0_0_0:0:0_0:0:0_8	137	chrT	22	30	35M	*	0	0	AGGCATGTTGTTACGACTAACCAGGATTCTTGAAA	?????>>>>>>>>>>=============<<<<<<<	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.599e+10	XS:Z:ag	PG:Z:gnu
+chrT_39_54_0_1_0_0_0:0:0_0:0:0_a	99	chrT	39	30	35M	=	54	50	TAACCAGGATTCTTGAAACAACAGAAAAACACACA	?????>>>>>>>>>>=============<<<<<<<	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.610e+10	XS:Z:tc	PG:Z:gnu
+chrT_39_54_0_1_0_0_0:0:0_0:0:0_a	147	chrT	54	30	35M	=	39	-50	AAACAACAGAAAAACACACACGATACGAAAACATT	<<<<<<<=============>>>>>>>>>>?????	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.605e+10	XS:Z:tc	PG:Z:gnu
+chrT_41_30_1_0_0_0_0:0:0_0:0:0_8	83	chrT	41	30	35M	=	30	-46	ACCAGGATTCTTGAAACAACAGAAAAACACACACG	<<<<<<<=============>>>>>>>>>>?????	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.599e+10	XS:Z:tc	PG:Z:gnu
+chrT_41_30_1_0_0_0_0:0:0_0:0:0_8	163	chrT	30	208	35M	=	41	46	TGTTACGACTAACCAGGATTCTTGAAACAACAGAA	?????>>>>>>>>>>=============<<<<<<<	AS:i:105	PG:Z:blat
+chrT_41_53_0_1_0_0_0:0:0_0:0:0_3	99	chrT	41	30	35M	=	53	47	ACCAGGATTCTTGAAACAACAGAAAAACACACACG	?????>>>>>>>>>>=============<<<<<<<	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.610e+10	XS:Z:tc	PG:Z:gnu
+chrT_41_53_0_1_0_0_0:0:0_0:0:0_3	147	chrT	53	30	35M	=	41	-47	GAAACAACAGAAAAACACACACGATACGAAAACAT	<<<<<<<=============>>>>>>>>>>?????	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.605e+10	XS:Z:tc	PG:Z:gnu
+chrT_42_25_1_0_0_0_0:0:0_0:0:0_4	393	chrT	25	30	35M	*	0	0	CATGTTGTTACGACTAACCAGGATTCTTGAAACAA	?????>>>>>>>>>>=============<<<<<<<	AS:i:105	XP:f:1.000e+00	X0:i:1	XD:f:2.334e+11	XS:Z:tc	PG:Z:gnu
+chrT_44_33_1_0_0_0_0:0:0_0:0:0_6	83	chrT	44	30	35M	=	33	-46	AGGATTCTTGAAACAACAGAAAAACACACACGATA	<<<<<<<=============>>>>>>>>>>?????	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.601e+10	XS:Z:tc	PG:Z:gnu
+chrT_44_33_1_0_0_0_0:0:0_0:0:0_6	163	chrT	33	30	35M	=	44	46	TACGACTAACCAGGATTCTTGAAACAACAGAAAAA	?????>>>>>>>>>>=============<<<<<<<	AS:i:105	XP:f:1.000e+00	X0:i:1	XD:f:2.334e+11	XS:Z:tc	PG:Z:gnu
+chrT_52_43_1_0_0_0_0:0:0_0:0:0_d	83	chrT	52	30	35M	=	43	-44	TGAAACAACAGAAAAACACACACGATACGAAAACA	<<<<<<<=============>>>>>>>>>>?????	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.601e+10	XS:Z:tc	PG:Z:gnu
+chrT_52_43_1_0_0_0_0:0:0_0:0:0_d	163	chrT	43	30	35M	=	52	44	CAGGATTCTTGAAACAACAGAAAAACACACACGAT	?????>>>>>>>>>>=============<<<<<<<	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.610e+10	XS:Z:tc	PG:Z:gnu
+chrT_56_67_0_1_0_0_0:0:0_1:0:0_7	73	chrT	56	30	35M	*	0	0	ACAACAGAAAAACACACACGATACGAAAACATTAT	?????>>>>>>>>>>=============<<<<<<<	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.605e+10	XS:Z:tc	PG:Z:gnu
+chrT_56_70_0_1_0_0_0:0:0_0:0:0_10	409	chrT	70	30	35M	*	0	0	CATACGATACGAAAACATTATTTCCTATGTGTTTT	<<<<<<<=============>>>>>>>>>>?????	AS:i:105	XP:f:1.000e+00	X0:i:1	XD:f:2.334e+11	XS:Z:tc	PG:Z:gnu
+chrT_56_70_0_1_0_0_0:0:0_0:0:0_9	99	chrT	56	30	35M	=	70	49	ACAACAGAAAAACACACACGATACGAAAACATTAT	?????>>>>>>>>>>=============<<<<<<<	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.605e+10	XS:Z:tc	PG:Z:gnu
+chrT_56_70_0_1_0_0_0:0:0_0:0:0_9	147	chrT	70	30	35M	=	56	-49	CACACGATACGAAAACATTATTTCCTATGTGTTTT	<<<<<<<=============>>>>>>>>>>?????	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.610e+10	XS:Z:tc	PG:Z:gnu
+chrT_58_42_1_0_0_0_0:0:0_0:0:0_4	83	chrT	58	30	35M	=	42	-51	AACAGAAAAACACACACGATACGAAAACATTATTT	<<<<<<<=============>>>>>>>>>>?????	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.605e+10	XS:Z:tc	PG:Z:gnu
+chrT_58_42_1_0_0_0_0:0:0_0:0:0_4	163	chrT	42	30	35M	=	58	51	CCAGGATTCTTGAAACAACAGAAAAACACACACGA	?????>>>>>>>>>>=============<<<<<<<	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.610e+10	XS:Z:tc	PG:Z:gnu
+chrT_58_67_0_1_0_0_0:0:0_0:0:0_9	409	chrT	67	30	35M	*	0	0	ACACATACGATACGAAAACATTATTTCCTATGTGT	<<<<<<<=============>>>>>>>>>>?????	AS:i:105	XP:f:1.000e+00	X0:i:1	XD:f:2.334e+11	XS:Z:tc	PG:Z:gnu
+chrT_61_47_1_0_0_0_0:0:0_0:0:0_1	83	chrT	61	30	35M	=	47	-49	AGAAAAACACACACGATACGAAAACATTATTTCCT	<<<<<<<=============>>>>>>>>>>?????	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.605e+10	XS:Z:tc	PG:Z:gnu
+chrT_61_47_1_0_0_0_0:0:0_0:0:0_1	163	chrT	47	30	35M	=	61	49	ATTCTTGAAACAACAGAAAAACACACACGATACGA	?????>>>>>>>>>>=============<<<<<<<	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.605e+10	XS:Z:tc	PG:Z:gnu
+chrT_65_50_1_0_0_0_0:0:0_0:0:0_0	83	chrT	65	30	35M	=	50	-50	AAACACACACGATACGAAAACATTATTTCCTATGT	<<<<<<<=============>>>>>>>>>>?????	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.605e+10	XS:Z:tc	PG:Z:gnu
+chrT_65_50_1_0_0_0_0:0:0_0:0:0_0	163	chrT	50	30	35M	=	65	50	CTTGAAACAACAGAAAAACACACACGATACGAAAA	?????>>>>>>>>>>=============<<<<<<<	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.605e+10	XS:Z:tc	PG:Z:gnu
+chrT_67_82_0_1_0_0_0:0:0_1:0:0_5	99	chrT	67	208	35M	=	82	50	ACACATACGATACGAAAACATTATTTCCTATGTGT	?????>>>>>>>>>>=============<<<<<<<	AS:i:105	PG:Z:blat
+chrT_67_82_0_1_0_0_0:0:0_1:0:0_5	147	chrT	82	30	35M	=	67	-50	AGACATTATTTCCTATGTGTTTTTCTGCTGTTTCA	<<<<<<<=============>>>>>>>>>>?????	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.610e+10	XS:Z:ag	PG:Z:gnu
+chrT_70_82_0_1_0_0_0:0:0_0:0:0_e	99	chrT	67	30	1D3M2D32M	=	82	50	CACACGATACGAAAACATTATTTCCTATGTGTTTT	?????>>>>>>>>>>=============<<<<<<<	AS:i:93	XP:f:1.000e+00	X0:i:1	XD:f:1.162e+10	XS:Z:ag	PG:Z:gnu
+chrT_70_82_0_1_0_0_0:0:0_0:0:0_e	147	chrT	82	208	35M	=	67	-50	AAACATTATTTCCTATGTGTTTTTCTGCTGTTTCA	<<<<<<<=============>>>>>>>>>>?????	AS:i:105	PG:Z:blat
+chrT_9_23_0_1_0_0_0:0:0_0:0:0_2	99	chrT	9	30	35M	=	23	49	ATTAGCTTATACCAGACATGTTGTTACGACTAACC	?????>>>>>>>>>>=============<<<<<<<	AS:i:101	XP:f:1.000e+00	X0:i:1	XD:f:8.602e+10	XS:Z:tc	PG:Z:gnu
+chrT_9_23_0_1_0_0_0:0:0_0:0:0_2	147	chrT	23	208	35M	=	9	-49	GACATGTTGTTACGACTAACCAGGATTCTTGAAAC	<<<<<<<=============>>>>>>>>>>?????	AS:i:105	PG:Z:blat

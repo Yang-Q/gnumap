@@ -1,0 +1,10 @@
+#!/project/earth/packages/Python-2.7.5/bin/python
+import sys
+
+try:
+	import _preamble
+except ImportError:
+	pass
+
+from cutadapt.scripts import cutadapt
+cutadapt.main()

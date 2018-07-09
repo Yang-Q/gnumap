@@ -1,0 +1,3 @@
+#!/bin/sh
+
+../scripts/gnumaps.pl --genome ./genomes/hs19/chr1.fa --pair_1 ./reads/SRR073726x_1.fastq --pair_2 ./reads/SRR073726x_2.fastq --qcontrol 1 --read_type dna --per_dist 150 --num_threads 4 --outdir ./exp/mpiQCper --debug 1

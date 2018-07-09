@@ -1,0 +1,177 @@
+#include "BSScoredSeq.h"
+
+void BSScoredSeq::score(double denom, Genome &gen, unsigned int len, Read &read, map<unsigned long, unsigned int> &refMapLoc, double &denom_new, pthread_mutex_t &lock) {
+
+	if(!positions.size())	//if there were no matches, just return.
+		return;
+
+	//we only need to compute this alignment string once because, while there may be many locations for each
+	//sequence, we're ensuring that the sequences are the exact same.
+
+	bin_seq bs;	// global one
+
+	pair<string,string> mapped;
+	string read_consensus;
+	string aligned, rev_comp;
+	string gen_string;
+	
+	int i;
+	unsigned int ui, uj;
+	int rL0 = read.length-1;
+	
+	int gL0 = sequence.size()-1;
+	int genStart, genLast;
+
+	double total_score = log_align_score / denom; //this will be used by call from sam2sgr only with gSAM2GMP = true
+//debug
+//	if (total_score < 0)
+//		fprintf(stderr,"how come total_score(%f) is <0\n",total_score);
+	
+	if (align_mode==SW_ALIGN) { //SW DP ------------------------
+
+		read_consensus = GetConsensus(read);
+		gen_string = sequence;
+		mapped = bs.smith_waterman_w_track(read, read_consensus, gen_string, align_score, positions_offset);//<--updated
+
+	}
+	
+	else { // NW DP ----------------
+		int sL0 = (int)ceil(((double)rL0+1.0)/4.0);
+		int probeL = gMAX_GAP + sL0;
+
+		//float** endRead_pwm = create_pwm(sL0+1);
+		float** endRead_pwm = read_create_copy(read.pwm,0,sL0+1);
+		Read endRead(endRead_pwm,sL0+1);
+		endRead.name = read.name;
+
+		// If it's on the revcomp strand
+		read_consensus = GetConsensus(read);
+		//need to find the beggining position of gen_string to map
+		
+		//note that sequence must be rev.com if this read was aligned to negative strand
+		if (gSAM2GMP) {gen_string=sequence;}
+		else{
+			if (probeE1) {
+				read_copy(endRead.pwm,read.pwm,0,sL0+1); // two indices
+				//cout << "probeE1\n"; //debug
+				bs.detect_nw_ends(endRead,sequence.substr(0,probeL),positions_offset,genLast,SEN_GEN_START);
+			}
+			else {positions_offset = 0;}
+
+			if (probeE2) {
+				//cout << read_consensus << "\n";
+				//cout << "probeE2\n"; //debug
+				read_copy(endRead.pwm,read.pwm,rL0-sL0,rL0); //two indices
+				bs.detect_nw_ends(endRead,sequence.substr(gL0-probeL,probeL+1),genStart,genLast,SEN_GEN_LAST);
+				genLast = gL0-probeL + genLast;
+			}
+			else {genLast = gL0;}
+			gen_string = sequence.substr(positions_offset,genLast-positions_offset+1);
+		}			
+
+		//fprintf(stderr,"Is on the negative strand! %s\n",__FILE__);
+		mapped = bs.get_align_score_w_traceback2(read, read_consensus, gen_string, align_score);//<--updated
+
+		// Clean up the copy of sensing probe
+		for(i=0; i<=sL0; i++) {delete[] endRead_pwm[i];}
+		delete[] endRead_pwm;
+
+	}
+	
+	aligned = mapped.first;
+	cigar2print = mapped.second; //<--updated
+	log_align_score = exp(align_score); //<--updated
+	
+	set<pair<unsigned long,int> >::iterator sit;
+		
+	if (gSAM2GMP) {
+	//we don't need positions_offset here since this position must be read from sam file which is already computed!		
+		rev_comp = reverse_comp(aligned);
+
+		//cout << "ts:" << total_score << " | genString:" << gen_string << " | readCons:" << read_consensus << " | alignedTrn:" << aligned << endl; //debugFcj
+		
+		MUTEX_LOCK(&lock);
+		for(sit=positions.begin(); sit!=positions.end(); sit++) {
+
+			if(sit->second == firstStrand) {
+				uj=0;
+				for(ui=0; ui<aligned.size(); ui++) {
+					if (aligned[ui] != 'i') {//match or delete?
+						gen.AddScore( (*sit).first+uj,total_score );
+						gen.AddSeqScore((*sit).first+uj,total_score,g_gen_CONVERSION[(unsigned int)aligned[ui]]);
+						uj++;
+					}
+				}
+			}
+			else {
+				uj=0;
+				for(ui=0; ui<rev_comp.size(); ui++) {
+					if (rev_comp[ui] != 'i') {//match or delete?
+						gen.AddScore( (*sit).first+uj,total_score );
+						gen.AddSeqScore((*sit).first+uj,total_score,g_gen_CONVERSION[(unsigned int)rev_comp[ui]]);
+						uj++;
+					}
+				}
+			}
+		}
+		MUTEX_UNLOCK(&lock);
+	}
+	else {
+		//update overall mapping position which is sent from outcall
+		for(sit=positions.begin(); sit!=positions.end(); sit++) {
+			if (refMapLoc[(*sit).first+positions_offset] == 0){
+				denom_new+=log_align_score;
+			}
+			refMapLoc[(*sit).first+positions_offset]++;
+		}		
+	}
+}
+
+
+inline string BSScoredSeq::GetConsensus(const Read &read) const {
+	string seq = "";
+
+	for(unsigned int i=0; i<read.length; i++) {
+		seq += max_char(read.pwm[i]);
+	}
+
+	return seq;
+}
+
+/*
+ * Because this is used to produce the consensus sequence, we need ambiguity characters...
+ */
+//inline char max_char(vector<double> &chr) {
+inline char BSScoredSeq::max_char(const float* chr) const {
+	if((chr[0] == chr[1]) && (chr[0] == chr[2]) && (chr[0] == chr[3]))
+		return 'n';
+	if(chr[0] >= chr[1]) {
+		if(chr[0] >= chr[2]) {
+			if(chr[0] >= chr[3])
+				return 'a';
+			else
+				return 't';
+			}
+		else {
+			if(chr[2] >= chr[3])
+				return 'g';
+			else
+				return 't';
+		}
+	}
+	else {
+		if(chr[1] >= chr[2]) {
+			if(chr[1] >= chr[3])
+				return 'c';
+			else
+				return 't';
+		}
+		else {
+			if(chr[2] >= chr[3])
+				return 'g';
+			else return 't';
+		}
+	}
+
+	return 'n';
+}

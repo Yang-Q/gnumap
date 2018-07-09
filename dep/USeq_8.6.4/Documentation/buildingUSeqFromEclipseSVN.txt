@@ -1,0 +1,63 @@
+# 26 Oct 2012: David.Nix@hci.utah.edu
+
+# This document describes how to create an Eclipse project synched to the USeq svn on SourceForge.  This can be done anonymously with read only access. If you would like to be considered for write permission developer access to the USeq svn, create an account on sourceforge and send your username to david.nix@hci.utah.edu . 
+
+# Install the SVN plugin Subversive from http://www.eclipse.org/subversive/downloads.php
+
+# Create a new project in Eclipse:
+
+File-> New-> Project-> SVN-> Project from SVN
+Checkout Project from SVN repository-> Create a new repository location https://svn.code.sf.net/p/useq/source/
+
+Select Resource with Browse button -> https://svn.code.sf.net/p/useq/source/trunk
+Hit Finish button
+
+Check Out As -> Check out as a project with the name specified: -> USeq
+Hit Finish button
+
+# The project should be ready to go but, to be sure:
+
+## Test the appropriate library references by opening the Source folder in Eclipse and naviate to a xxx.java file and type something to break the code.  It should turn red with error indicators.  If not you may need to reset the Build Path in the project Preferences.
+
+## Build a 'USeq_TestRelease1.0:
+
+1)	Download ANT binaries: http://ant.apache.org/bindownload.cgi and copy the downloaded, unzipped directory to a safe location.
+2)  Create ANT_HOME environmental variable:  (In ~/.bashrc: export ANT_HOME=/path/to/ant/install/directory/apache-ant-1.8.4/)
+3) 	Download ant-contrib-0.6 : http://sourceforge.net/projects/ant-contrib/files/ant-contrib/.  Move the ant-contrib-0.6.jar file into the ant lib directory
+
+Build From Eclipse
+
+4) Point eclipse to your ant installation (one time only).  Select from menu: 'Eclipse->Preferences->Ant->Runtime'. Click on the 'Ant Home' button and select the Ant installation directory (see step 1)
+5) Navigate to build.properties and change version to 'TestRelease1.0'
+6) Navigate to build.xml, right click on 'build-release' under the Outline View Tab and select 'Run As->Ant Build'
+
+Build from command line
+
+4) Navigate to USeq directory.
+5) open build.properties and change version to 'TestRelease1.0'
+6) type 'ant' on the command line
+
+*Users can setup custom build tasks to make deployment to a server easier (See mosbruger-release).  Custom tasks can be executed with in Eclipse or run on the command line by typing: 'ant mosbruger-release'.
+
+*If you are using a mac and want to use a an custom environmental variable in your ant build script, you need to add the following lines to your ~/.bashrc and restart eclipse:
+export VARNAME=variable_information
+launchctl setenv VARNAME $VARNAME 
+
+
+**************************** DEPRICATED *************************************
+This is no longer updated and may miss new applications.
+
+## Build a 'USeq_TestRelease1.0':
+Open a terminal and navigate into the USeq/Classes directory
+Type 'java edu/utah/seq/misc/MakeUSeq TestRelease1.0'
+
+## Customize the Source/edu/utah/seq/misc/MakeUSeq.java file to create soft links and an appropriate rsync call specific for your configuration.
+
+*****************************************************************************
+
+
+
+## Are you seeing a big list of xxx.jar files in the navigation tree?  Switch to Package Explorer, not Project Explorer: Window-> Show View-> Package Explorer
+
+## Developers, please do not check in any xxx.class files or folders from the Classes directory to the Sourceforge SVN
+

@@ -1,0 +1,1 @@
+/home/hong/apps/ngs_aligners/gnumaps/examples/reads/ref-wc-methy_1.txt
